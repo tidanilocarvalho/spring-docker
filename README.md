@@ -34,13 +34,13 @@ http://localhost:15672/#/
 
 # postgres
 docker pull postgres \
-docker run --name some-postgres -e POSTGRES_PASSWORD=danilo -d postgres \
+docker run --name some-postgres -e POSTGRES_PASSWORD=danilo -d postgres
 
 # remove
 docker rmi -f <IMAGE_ID>
 
 # calc-age
 docker build -t spring/spring-boot-calc-age . \
-docker run -p 8080:8080 spring/spring-boot-calc-age
+docker run -p 8080:8080 spring/spring-boot-calc-age \
 docker tag 91f9a54b66cb tidanilocarvalho/spring-boot-calc-age:calc-age \
 docker push tidanilocarvalho/spring-boot-calc-age
